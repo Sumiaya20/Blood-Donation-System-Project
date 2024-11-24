@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Centering container */
+.container {
+    text-align: center;
+}
+
+/* Title for the form */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Flexbox layout for fields */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group div {
+    width: 48%;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Full-width group */
+.form-group.full-width {
+    flex-direction: column;
+}
+
+.form-group.full-width input,
+.form-group.full-width select {
+    width: 100%;
+}
+
+.form-group.full-width button {
+    width: 100%;
+}
+
+/* Submit Button */
+button {
+    padding: 10px;
+    background-color: #8A0707; /* Blood-like deep red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #B22222; /* Slightly brighter blood-red for hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-group div {
+        width: 100%;
+    }
+}

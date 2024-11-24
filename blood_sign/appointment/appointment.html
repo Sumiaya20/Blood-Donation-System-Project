@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Appointment Form</title>
+    <link rel="stylesheet" href="appointment.css">
+    <script>
+        // Check if the URL has the 'reset=true' query parameter
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('reset') && urlParams.get('reset') === 'true') {
+                alert("Appointment booked successfully!");
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Blood Donation Appointment</h1>
+        <form id="appointmentForm" action="appointment.php" method="post">
+            <!-- Full Name and Date of Birth -->
+            <div class="form-group">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+
+            <!-- Blood Type and Phone -->
+            <div class="form-group">
+                <div>
+                    <label for="blood_type">Blood Type:</label>
+                    <select id="blood_type" name="blood_type" required>
+                        <option value="">Select blood group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <!-- Email and Last Donation Date -->
+            <div class="form-group">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="last_donation_date">Last Donation Date:</label>
+                    <input type="date" id="last_donation_date" name="last_donation_date">
+                </div>
+            </div>
+
+            <!-- Appointment Date and Donation Center Name -->
+            <div class="form-group">
+                <div>
+                    <label for="appointment_date">Appointment Date and Time:</label>
+                    <input type="datetime-local" id="appointment_date" name="appointment_date" required>
+                </div>
+                <div>
+                    <label for="donation_center_name">Donation Center Name:</label>
+                    <input type="text" id="donation_center_name" name="donation_center_name" required>
+                </div>
+            </div>
+
+            <!-- Donation Center Address -->
+            <div class="form-group full-width">
+                <label for="donation_center_address">Donation Center Address:</label>
+                <input type="text" id="donation_center_address" name="donation_center_address" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group full-width">
+                <button type="submit">Book Appointment</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

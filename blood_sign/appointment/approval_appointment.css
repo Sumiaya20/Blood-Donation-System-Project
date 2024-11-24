@@ -1,0 +1,101 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Container */
+form {
+    max-width: 350px; /* Further reduce the max width */
+    margin: 0 auto;
+    padding: 10px; /* Reduce the padding */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 5px 0 2px; /* Minimize label margin */
+    color: #555;
+}
+
+/* Form Inputs and Select */
+input[type="text"],
+input[type="datetime-local"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 6px; /* Further reduce input padding */
+    margin-bottom: 10px; /* Reduce margin between fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 13px; /* Reduce font size */
+}
+
+/* Buttons */
+button {
+    width: 45%; /* Keep button width minimized */
+    padding: 6px; /* Reduce button padding */
+    font-size: 13px; /* Further reduce font size */
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Cancel Button Styling */
+button[type="button"] {
+    background-color: #f44336; /* Red for cancel */
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    background-color: #4CAF50; /* Green for submit */
+    float: right;
+}
+
+/* Responsive Two-Button Layout */
+button[type="button"], button[type="submit"] {
+    display: inline-block;
+    width: calc(45% - 10px);
+    margin-bottom: 0;
+}
+
+button[type="button"] {
+    float: left;
+}
+
+/* Clear Floats */
+form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        float: none;
+    }
+
+    button[type="button"] {
+        float: none;
+    }
+}
